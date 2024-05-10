@@ -8,10 +8,10 @@ if (source == null) {
 }
 if (source !== null && source !== "") {
     if (source.toLowerCase() === 'google') {
+        $("a.dynamicPhoneNumber").attr("href", "tel:8886885786");
+        $("div.dynamicPhoneText").html("TEXT or CALL: (888) 688-5786");
+    } else if (source.toLowerCase() === 'facebook') {
         $("a.dynamicPhoneNumber").attr("href", "tel:4087818428");
         $("div.dynamicPhoneText").html("TEXT or CALL: (408) 781-8428");
-    } else if (source.toLowerCase() === 'facebook') {
-        $("a.dynamicPhoneNumber").attr("href", "tel:4087818888");
-        $("div.dynamicPhoneText").html("TEXT or CALL: (408) 781-8888");
     }
 }
