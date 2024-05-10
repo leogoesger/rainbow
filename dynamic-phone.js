@@ -15,5 +15,3 @@ if (source !== null && source !== "") {
         $("div.dynamicPhoneText").html("TEXT or CALL: (408) 781-8888");
     }
 }
-
-
