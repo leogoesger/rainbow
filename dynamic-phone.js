@@ -3,8 +3,9 @@ const urlParams = new URLSearchParams(window.location.search);
 var source = urlParams.get('adsource');
 if (source == null) {
     source = localStorage.getItem('adsource');
-    console.log(source)
-    window.location.replace(window.location.href + "?adsource=" + source);
+    if (source != null && source != "") {
+        window.location.replace(window.location.href + "?adsource=" + source);
+    }
 }
 if (source !== null && source !== "") {
     localStorage.setItem('adsource', source);
