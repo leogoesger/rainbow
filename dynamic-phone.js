@@ -15,3 +15,9 @@ if (source !== null && source !== "") {
         $("div.dynamicPhoneText").html("TEXT or CALL: (408) 781-8428");
     }
 }
+
+var promoSource = urlParams.get('promo');
+if (promoSource != null && promoSource.toLowerCase() === 'true') {
+    const currentMonth = new Date().toLocaleString('en-US', { month: 'long' });
+    $("h4.promotion").html(`For the month of ${currentMonth}, get <strong class="promoAmount">$500 off</strong> your first month tuition!`);
+}

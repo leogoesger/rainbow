@@ -353,7 +353,6 @@
                     }, e.c("div", {
                         className: "".concat(i.className, " snack-alert")
                     }, s.alert));
-                    console.log("missing snackbar root", this, id)
                 }
             })
         },
@@ -749,7 +748,6 @@
                     f = t(r),
                     l = document.getElementById(r);
                 if (!l) {
-                    console.log("returning", r, _this);
                     return
                 }
                 var c = n(f),
@@ -865,7 +863,6 @@
             })()
         }("tINaMDSKrgDwAPqTMjNl"),
         function (e) {
-            console.log(t, "pressure and time");
             var n = t("#" + e),
                 r = t("#header03Overlay"),
                 i = t("#menuIcon"),
@@ -1266,7 +1263,6 @@
                         cb: function () {
                             var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null,
                                 r = arguments.length > 1 ? arguments[1] : undefined;
-                            console.log("cb", r, n);
                             var i = r.form.success;
                             d.trigger("convertly_form_submission_post_request", {
                                 formName: h,
