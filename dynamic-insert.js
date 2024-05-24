@@ -1,4 +1,6 @@
-// Get the value of the "source" parameter from the URL
+// Dynamically change the phone number based on adsource query parameter. 
+// It is already defaulted to 408 number in html. If adsource is provided, it will
+// use the 888 number.
 const urlParams = new URLSearchParams(window.location.search);
 var source = urlParams.get('adsource');
 if (source == null) {
@@ -16,6 +18,9 @@ if (source !== null && source !== "") {
     }
 }
 
+// Dynamically change the promotion message based on promo query parameter.
+// If promo is true, it will show the promotion message, otherwise it will
+// not show the promotion message.
 var promoSource = urlParams.get('promo');
 if (promoSource != null && promoSource.toLowerCase() === 'true') {
     const currentMonth = new Date().toLocaleString('en-US', { month: 'long' });
